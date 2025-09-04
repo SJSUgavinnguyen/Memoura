@@ -2,6 +2,11 @@
   <img src="assets/memoura-banner.svg" alt="memoura logo" width="100%" />
 </p>
 
+# About
 
-# Memoura
-PLACEHOLDER: A project for 133
+# Installation
+### Mac
+Prerequisites:
+
+### Windows
+Prerequisites:
