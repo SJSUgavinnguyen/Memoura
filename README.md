@@ -37,7 +37,7 @@ git clone https://github.com/SJSUgavinnguyen/Memoura.git
 cd Memoura
 
 # make sure you are in the main folder and install dependencies
-npm install
+npm install       // Windows only: If you get an error along the lines of "cannot be loaded beucase running scripts is diabled on this system", open powershell and use this command: Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 # start the Vite dev server
 npm run dev
