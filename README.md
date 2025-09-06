@@ -1,69 +1,43 @@
-# React + TypeScript + Vite
+<p align="center">
+  <img src="assets/memoura-banner.svg" alt="memoura logo" width="100%" />
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Memoura
 
-Currently, two official plugins are available:
+A student-first note-taking and productivity app.  
+Built with **Electron + React + TypeScript + TailwindCSS**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Requirements
+To run Memoura locally, you’ll need:
+- [Node.js (LTS recommended)](https://nodejs.org/) — comes with `npm`
+- [Git](https://git-scm.com/)
+- Any text editor
+- Works on: mac os, windows, or Linux
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Optional: Electron
+Right now Memoura runs perfectly in the **browser** using the Vite dev server.  
+Electron is only needed if you want to run Memoura as a **desktop app**:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Without Electron** → run `npm run dev` and open [http://localhost:5173](http://localhost:5173).  
+- **With Electron** → launch Memoura in a desktop window (like a real app).  
+- **For Final Product** → Electron will also allow packaging Memoura as an installer (`.exe`, `.dmg`, `.AppImage`).  
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+> **Important:** For early development, you don’t need Electron. Add it whenever you’re ready for desktop features... or never add it at all if you just want the browser version. (This is a uni project after all!)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Getting Started (for mac, windows, and linux)
+```bash
+# clone the repo
+git clone https://github.com/SJSUgavinnguyen/Memoura.git
+cd Memoura
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# make sure you are in the main folder and install dependencies
+npm install
+
+# start the Vite dev server
+npm run dev
